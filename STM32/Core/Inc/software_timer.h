@@ -9,6 +9,7 @@
 #define INC_SOFTWARE_TIMER_H_
 
 extern int timer1_flag;
+extern int timer1_counter;
 
 void setTimer1(int duration);
 void timerRun();
