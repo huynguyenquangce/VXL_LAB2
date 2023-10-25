@@ -236,16 +236,22 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 setTimer1(2);
+setTimer2(2);
   while (1)
   {
 	  if(timer1_flag==1)
 	  {
-		  setTimer1(100);
+		  setTimer1(25);
 		  update7SEG(index_led++);
 		  if(index_led>=4)
 		  {
 			  index_led=0;
 		  }
+	  }
+	  if(timer2_flag==1)
+	  {
+		  setTimer2(100);
+		  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 	  }
     /* USER CODE END WHILE */
 	    /* USER CODE END WHILE */
